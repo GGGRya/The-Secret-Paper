@@ -1,0 +1,330 @@
+{
+  "reading": [
+    {
+      "no": 1,
+      "Q":"What are Von Wong’s artworks intended for?",
+      "A": "Beautifying the city he lives in.",
+      "B": "Introducing eco-friendly products.",
+      "C": "Drawing public attention to plastic waste.",
+      "D": "Reducing garbage on the beach.",
+      "Aline": ["What is the","cleaner","working for","?"],
+      "Bline": ["What did", "the hostress","do","in the dinner party","?"],
+      "Cline": ["But does one plastic straw or cup really make a difference? Artist Benjamin Von Wong wants you to know that it does. He builds massive sculptures out of plastic garbage, forcing viewers to re-examine their relationship to single-use plastic products."],
+      "Dline": ["Why is","he","leaving","the beach","?"]
+    },
+        {
+      "no": 2,
+      "Q":"Why does the author discuss plastic straws in paragraph 3?",
+      "A": "To show the difficulty of their recycling.",
+      "B": "To explain why they are useful.",
+      "C": "To voice his views on modern art.",
+      "D": "To find a substitute for them.",
+      "Aline": ["Just 9% of global plastic waste is recycled. Plastic straws are by no means the biggest source of plastic pollution, but they’ve recently come under fire because most people don’t need them to drink with and, because of their small size and weight, they cannot be recycled. Every straw that’s part of Von Wong’s artwork likely came from a drink that someone used for only a few minutes. Once the drink is gone, the straw will take centuries to disappear."],
+      "Bline":["Why","are","they","arguing","now","?"],
+      "Cline": ["Why is","the boy","crying","?"],
+      "Dline": ["Why","did they","commercialize","the keyboard","?"]
+    },
+            {
+      "no": 3,
+      "Q":"What effect would “Truckload of Plastic” have on viewers?",
+      "A": "Calming.",
+      "B": "Disturbing.",
+      "C": "Refreshing.",
+      "D": "Challenging.",
+      "Aline": ["What effect would","viewers","have on","“Truckload of Plastic”"],
+      "Bline":["How","do you","feel","about","the exam","?"],
+      "Cline": ["In a piece form 2018, Von Wong wanted to illustrate a specific statistic: Every 60 seconds, a truckload’s worth of plastic enters the ocean. For this work, titled “Truckload of Plastic,” Von Wong and a group of volunteers collected more than 10,000 pieces of plastic, which were then tied together to look like they’d been dumped from a truck all at once."],
+      "Dline": ["How about","travelling","to Earth","?"]
+    },
+                {
+      "no": 4,
+      "Q":"Which of the following can be the best title for the text?",
+      "A": "Artists’ Opinions on Plastic Safety",
+      "B": "Media Interest in Contemporary Art",
+      "C": "Responsibility Demanded of Big Companies",
+      "D": "Ocean Plastics Transformed into Sculptures",
+      "Aline": ["What","will disappear gradually","?"],
+      "Bline": ["What is","growing faster","?"],
+      "Cline": ["Tell","me","interesting stories","."],
+      "Dline": ["But does one plastic straw or cup really make a difference? Artist Benjamin Von Wong wants you to know that it does. He builds massive sculptures out of plastic garbage, forcing viewers to re-examine their relationship to single-use plastic products."]
+    }
+  ],
+  
+  "cloze": [{    
+    "no":1,
+    "choices":["put forward","jumped at","tried  out","turned down"],
+    "lines":[["During my second year at the city college, I was told that the education department was offering a “free” course, called Thinking Chess, for three credits. ","I","put forward","the best","reason for","taking the class",": ","who doesn’t want to save a few dollars? "],
+["During my second year at the city college, I was told that the education department was offering a “free” course, called Thinking Chess, for three credits. I jumped at the idea of taking the class because, after all, who doesn’t want to save a few dollars? "],
+["During my second year at the city college, I was told that the education department was offering a “free” course, called Thinking Chess, for three credits.", "I","tried out","the class because, after all, who doesn’t want to save a few dollars? "],
+["During my second year at the city college, I was told that the education department was offering a “free” course, called Thinking Chess, for three credits.","I","turned down","their","invitation","so that","you need","not to","finish","the exam","."]]
+  },{    
+    "no":2,
+    "choices":["title","competitor","textbook","instructor"],
+    "lines":[["More than that, I’d always wanted to learn chess. And, even if I weren't excited enough about free credits, ","I was","excited","about the","title","our","instructor","had","won."],
+["More than that, I’d always wanted to learn chess. And, even if I weren’t excited enough about free credits,","my","competitor","was","always","excited","about me."],
+["More than that, I’d always wanted to learn chess. And, even if I weren’t excited enough about free credits,","the wooden","smell","of the","textbook","was appealing enough to me. "],
+["More than that, I’d always wanted to learn chess. And, even if I weren’t excited enough about free credits, news about our instructor was appealing enough to me. "]]
+  },{    
+    "no":3,
+    "choices":["urged","demanded","held","meant"],
+    "lines":[["He was an international grandmaster, which","urged","me","to make","a","will"],
+["He was an international grandmaster, which demanded","one of the game’s best","instructor."],
+["The book","was an international", "masterpiece,","which","held", "the idea","from one of the game’s best. "],
+["He was an international grandmaster, which meant I would be learning from one of the game’s best." ]]
+  },
+    {    
+    "no":4,
+    "choices":["interview","meet","challenge","beat"],
+    "lines":[["I could hardly wait to","interview","him."],
+["I could hardly wait to meet him."],
+["I could hardly wait to"," challenge","him."],
+["I could hardly wait to","beat", "him."]]
+  },{    
+    "no":5,
+    "choices":["real","perfect","clear","possible"],
+    "lines":[["Maurice Ashley was kind and smart, a former graduate returning to teach, and this job was no game for him: he meant business. In his introduction, he made it","real","that", "my","title","on the newspaper","next day"],
+ ["Maurice Ashley was kind and smart, a former graduate returning to teach, and this job was no game for him: he meant business. In his introduction, he made it","perfect","as if","the course","costs","millions of","dollars"],
+["Maurice Ashley was kind and smart, a former graduate returning to teach, and this job was no game for him: he meant business. In his introduction, he made it clear that our credits would be hard-earned."],["Maurice Ashley was kind and smart, a former graduate returning to teach, and this job was no game for him: he meant business. In his introduction, he made it","possible","that our credits would","earn","dollars."]]
+  },
+    {"no":6,
+    "choices":["add","expose","apply","compare"],
+     "lines":[["In order to pass the class, among other criteria, we had to write a paper on how we plan to add","dollars","on", "our future professions and, eventually, to our lives. "],
+["In order to pass the class, among other criteria, we had to write a paper on how we plan to expose","what we would learn in class", "to", "the official","news agency"],
+["In order to pass the class, among other criteria, we had to write a paper on how we plan to apply what we would learn in class to our future professions and, eventually, to our lives. "],
+["In order to pass the class, among other criteria, we had to write a paper on how we plan to compare what we would learn in class to","the","polar bear in the Arctic Circle."]]
+
+  },{    
+    "no":7,
+    "choices":["game","presentation","course","experiment"],
+        "lines":[["I managed to get","a friend","in that game and learned life lessons that have served me well beyond","this","competition."],
+["I managed to get an A in that presentation","of","that course","and learned life lessons that have served me well beyond the classroom."],
+["I managed to get an A in that course and learned life lessons that have served me well beyond the classroom."],
+["I managed to get an A in that","experiment","about","the","polar bear","and learned life lessons that have served me well beyond the classroom."]]
+  },{    
+    "no":8,
+    "choices":["fact","step","manner","skills"],
+"lines":[["Ten years after my chess class with Ashley, I’m still putting to use what he taught me: “The absolute most important fact that you learn when you play chess","with a","polar bear", "is","that", "there are about 20,000-25,000 polar bears worldwide.”"],
+["Ten years after my chess class with Ashley, I’m still putting to use what he taught me: “The absolute most important step that you learn when you play chess is to","give up","at first.”"],
+["Ten years after my chess class with Ashley, I’m still putting to use what he taught me: “The absolute most important","manner","that you learn when you play chess is","to say","thank you.”"],
+["Ten years after my chess class with Ashley, I’m still putting to use what he taught me: “The absolute most important skills that you learn when you play chess is how to make good decisions.”"]]
+  },{    
+    "no":9,
+    "choices":["analyze","describe","rebuild","control"],
+    "lines":[["“On every single move you have to analyze a situation, process what your opponent is doing and evaluate the best move from among all your options.”"],["“On every single move you have to","describle","a situation,","interview", "what your opponent is doing and evaluate the best move from among all your options.”"],["“On every single move you have to", "rebuild","a situation, process what your opponent is doing and evaluate the best move from among all your options","and","do it","again.”"],["“On every single move","that you","control a situation,","your opponent","will","process what","you are","doing and evaluate the best move from among all your options.”"]]
+  },{    
+    "no":10,
+    "choices":["role","desire","concern","behaviour"],
+    "lines":[["These words still ring true today in my role as a journalist."] ,["These words still ring true today in my","desire","to be","a polar bear."] ,["These words still ring true today in my","concern about","a polar bear."] ,["These words still ring true today in my","behaviour","as","a polar bear"] ]
+  }],
+  
+  "matching":[{
+    "no":0,
+    "Aline":["...Fresh air cleans our lungs.If the air you’re breathing is clean-which it would be if you’re away from the smog of cities-then the air is filled with life-giving，energizing oxygen. If you exercise out of doors，your body will learn to breathe more deeply，allowing even more oxygen to get to your muscles and your brain."],
+    "Bline":["“Slow down!” ","The music ","will disappear gradually.","“Speed up!” ","So what are you waiting for?"],
+    "Cline":[".....Greenery is good for us. Hospital patients Who see tree branches out their window are likely to recover at a faster rate than patients who see buildings or sky instead. Being in nature refreshes us. It gives us a great feeling of peace."],
+    "Dline":["......Another side benefit of getting fresh air is sunlight. While the sun's rays can age and harm our skin, they also give is beneficial Vitamin D. To make sure you get enough Vitamin D--but still protect your skin--put on sunscreen right as you head outside. It takes sunscreen about fifteen minutes to start working, and that's plenty of time for your skin to absorb a day's worth of Vitamin D."],
+    "Eline":["We all grew up hearing  people tell us to “go out and get some fresh air.” But is fresh air really as good for you as your mother always said? According to recent studies，the answer is a big YES，if the air quality in your camping area is good."],
+    "Fline":["Just as importantly, we tend to associate air with health care.","If you are a teenager",",","it is also","related to","the illusion","of","summer" ],
+    "Gline":["....Recently，people have begun studying the connection between the natural world and healing. All across the country, recovery centers have begun building Healing Gardens. In these places patients can go to be near nature during their recovery. It turns out that just looking at green，growing things can reduce stress，lower blood pressure，and put people into a better mood."],
+    "A": "Fresh air cleans our lungs.",
+    "B": "So what are you waiting for?",
+    "C": "Being in nature refreshes us.",
+    "D": "Another side benefit of getting fresh air is sunlight.",
+    "E": "But is fresh air really as good for you as your mother always said?",
+    "F": "Just as importantly, we tend to associate air with health care.",
+    "G": "All across the country, recovery centers have begun building Healing Gardens."
+  }],
+  
+  "correcting":[{
+    "no":0,
+    "line":"Today I tried ",
+    "correct":["I hate "]
+  },
+                {
+    "no":1,
+    "line":"cooking a ",
+    "correct":["telling them "]
+  },
+                {
+    "no":2,
+    "line":"simply dish ",
+    "correct":["simple dish "]
+  },
+                {
+    "no":3,
+    "line":"myself. ",
+    "correct":["myself. "]
+  },
+                {
+    "no":4,
+    "line":"I like eating ",
+    "correct":["I like eating "]
+  },
+                {
+    "no":5,
+    "line":"frying tomatoes ",
+    "correct":["fried tomatoes "]
+  },
+                {
+    "no":6,
+    "line":"with eggs, ",
+    "correct":["with eggs, "]
+  },
+                {
+    "no":7,
+    "line":"and I thought",
+    "correct":["and I thought"]
+  },
+    {
+      "no":8,
+      "line":"it must ",
+      "correct":["it must "]
+    },
+                {
+    "no":8,
+    "line":"to be easy to cook. ",
+    "correct":["to be easy to cook. "]
+  },
+                {
+    "no":9,
+    "line":"My mom told me ",
+    "correct":["My mom told me "]
+  },
+                {
+    "no":10,
+    "line":"how to ",
+    "correct":["how to "]
+  },
+                {
+    "no":11,
+    "line":"preparing it. ",
+    "correct":["prepare it. "]
+  },
+                {
+    "no":12,
+    "line":"First I cut the ",
+    "correct":["First I cut the "]
+  },
+                {
+    "no":13,
+    "line":"tomatoes into pieces ",
+    "correct":["tomatoes into pieces "]
+  },
+                {
+    "no":14,
+    "line":"but put them aside. ",
+    "correct":["and put them aside. "]
+  },
+                {
+    "no":15,
+    "line":"Next I broke",
+    "correct":["Next I broke"]
+  },
+                {
+    "no":16,
+    "line":"the eggs",
+    "correct":["the eggs"]                
+                },
+                {
+    "no":16,
+    "line":"into a bowl and ",
+    "correct":["into a bowl and "]
+  },
+                {
+    "no":17,
+    "line":"beat them quickly ",
+    "correct":["beat them quickly "]
+  },
+                {
+    "no":18,
+    "line":"with chopstick. ",
+    "correct":["with chopsticks."]
+  },
+                {
+    "no":19,
+    "line":"After that ",
+    "correct":["After that "]
+  },
+                                {
+    "no":19,
+    "line":"I poured oil ",
+    "correct":["I poured oil "]
+  },
+                {
+    "no":20,
+    "line":"into a pan and ",
+    "correct":["into a pan and "]
+  },
+                {
+    "no":21,
+    "line":"turned off the stove. ",
+    "correct":["turned on the stove. "]
+  },
+                {
+    "no":22,
+    "line":"I waited patiently ",
+    "correct":["I waited patiently "]
+  },  
+                {
+    "no":23,
+    "line":"unless the",
+    "correct":["until the"]
+  },
+                                {
+    "no":23,
+    "line":"oil was hot. ",
+    "correct":["oil was hot. "]
+  },
+                {
+    "no":24,
+    "line":"Then I put ",
+    "correct":["Then I put "]
+  },
+                {
+    "no":25,
+    "line":"the tomatoes and",
+    "correct":["the tomatoes and"]
+  },
+                                {
+    "no":25,
+    "line":"the beaten eggs ",
+    "correct":["the beaten eggs "]
+  },
+                {
+    "no":26,
+    "line":"into pan together. ",
+    "correct":["into the pan together. "]
+  },
+                {
+    "no":27,
+    "line":"＂Not that way，＂ ",
+    "correct":["＂Not that way，＂ "]
+  },
+                {
+    "no":28,
+    "line":"my mom tried to stop us ",
+    "correct":["my mom tried to stop us "]
+  },
+                {
+    "no":29,
+    "line":"but failed. ",
+    "correct":["but failed. "]
+  },
+                {
+    "no":30,
+    "line":"She was right. ",
+    "correct":["She was right. "]
+  },
+                {
+    "no":31,
+    "line":"It didn’t tum out ",
+    "correct":["It didn’t tum out "]
+  },
+                {
+    "no":32,
+    "line":"as I had wished. ",
+    "correct":["as I had wished. "]
+  }                 ]
+}
+
+

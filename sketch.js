@@ -571,22 +571,22 @@ function create2019() {
   Am = createElement("span",collage(matching[0].Aline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Bm = createDiv("span",collage(matching[0].Bline)).style(
+  Bm = createElement("span",collage(matching[0].Bline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Cm = createDiv("span",collage(matching[0].Cline)).style(
+  Cm = createElement("span",collage(matching[0].Cline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Dm = createDiv("span",collage(matching[0].Dline)).style(
+  Dm = createElement("span",collage(matching[0].Dline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Em = createDiv("span",collage(matching[0].Eline)).style(
+  Em = createElement("span",collage(matching[0].Eline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Fm = createDiv("span",collage(matching[0].Fline)).style(
+  Fm = createElement("span",collage(matching[0].Fline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Gm = createDiv("span",collage(matching[0].Gline)).style(
+  Gm = createElement("span",collage(matching[0].Gline)).style(
     "font-size:80%;visibility:hidden"
   );
 }
@@ -608,19 +608,19 @@ function re2019() {
     stroke(200, 0, 0, random(200));
     if (nM == 1) {
       Am.style("visibility:visible")
-        .position(random(width * 0.4, width * 0.7), height / 5)
+        .position(random(width * 0.4, width * 0.7), (height * 3) / 10)
         .show();
       line(A19.x + 40, A19.y + 4, Am.x, Am.y);
     }
     if (nM == 2) {
       Bm.style("visibility:visible")
-        .position(random(width * 0.4, width * 0.8), (height * 3) / 10)
+        .position(random(width * 0.4, width * 0.8), (height * 4) / 10)
         .show();
       line(B19.x + 40, B19.y + 4, Bm.x, Bm.y);
     }
     if (nM == 3) {
       Cm.style("visibility:visible")
-        .position(random(width * 0.4, width * 0.9), (height * 4) / 10)
+        .position(random(width * 0.4, width * 0.9), (height * 6) / 10)
         .show();
       line(C19.x + 40, C19.y + 4, Cm.x, Cm.y);
     }
@@ -633,7 +633,7 @@ function re2019() {
     }
     if (nM == 5) {
       Em.style("visibility:visible")
-        .position(random(width * 0.4, width * 0.9), (height * 6) / 10)
+        .position(random(width * 0.4, width * 0.9), height/5)
         .show();
       line(E19.x + 40, E19.y + 4, Em.x, Em.y);
     }
@@ -645,7 +645,7 @@ function re2019() {
     }
     if (nM == 7) {
       Gm.style("visibility:visible")
-        .position(random(width * 0.4, width * 0.7), (height * 7) / 9)
+        .position(random(width * 0.4, width * 0.7), (height * 8) / 10)
         .show();
       line(G19.x + 40, G19.y + 4, Gm.x, Gm.y);
     }

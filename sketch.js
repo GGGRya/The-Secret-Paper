@@ -60,9 +60,6 @@ function setup() {
   create2020();
   create2021();
   d = width + height;
-  //  glitch = new Glitch();
-  //  glitch.loadType("jpg");
-  //  glitch.loadImage("IMG_3596.jpg");
 }
 
 function dataLoaded(json) {
@@ -769,4 +766,7 @@ function hide2021() {
   back.hide();
   input.hide();
   button.hide();
+}
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }

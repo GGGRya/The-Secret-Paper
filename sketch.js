@@ -724,7 +724,7 @@ function create2021() {
 function re2021() {
   inst
     .html(
-      "Writing. Write down 20-word sentence about your traning experience on the past-5-year exam papers, and the paper will make you a 100-word passage."
+       "Writing. Write down 20-word sentence about your traning experience on the past-5-year exam papers. You can copy and paste the words on the paper."
     )
     .show();
   back.show();

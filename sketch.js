@@ -62,10 +62,8 @@ function setup() {
   create2020();
   create2021();
   d = width + height;
-  /*glitch = new Glitch();
-  loadImage("IMG_3596.jpg", function (im) {
-    glitch.loadImage(im);
-  });*/
+  glitch = new Glitch();
+  glitch.loadType("jpg");
 }
 
 function dataLoaded(json) {
@@ -76,10 +74,14 @@ function dataLoaded(json) {
 }
 
 function draw() {
-  /*  glitch.resetBytes();
-  glitch.randomBytes(1);
-  glitch.buildImage(); */
   background(240);
+  /* glitch.resetBytes();
+  glitch.randomBytes(10);
+  glitch.buildImage();
+  glitch.buildImage(function (img) {
+    background(240);
+    image(img, 0, 0, width, height);
+  });*/
   //  image(glitch.image, 0, 0, width, height);
   image(paper, 0, 0, width, height);
   if (start == 1) {
@@ -686,7 +688,7 @@ function create2020() {
         height * 0.05 * floor(i / 7 + 1) + height * 0.3 * random(0.98, 1.02)
       );
   }
-    console.log(psg.length);
+  console.log(psg.length);
 }
 function re2020() {
   inst
@@ -703,7 +705,6 @@ function re2020() {
       )
       .show();
   });
-
 }
 function hide2020() {
   inst.hide();

@@ -12,15 +12,10 @@ let abcd = ["A. ", "B. ", "C. ", "D. ", "E. ", "F. ", "G. "];
 let A19, B19, C19, D19, E19, F19, G19;
 let Am, Bm, Cm, Dm, Em, Fm, Gm;
 let nM;
-let lines20 = [];
 let Aliner = [],
   Bliner = [],
   Cliner = [],
   Dliner = [];
-let Alinez = [],
-  Blinez = [],
-  Clinez = [],
-  Dlinez = [];
 let p20 = [];
 let psg = [];
 let pc = [];

@@ -19,6 +19,8 @@ let Aliner = [],
 let p20 = [];
 let psg = [];
 let pc = [];
+let ps = [],
+  pu = [];
 
 let t2021,
   t = 0,
@@ -58,9 +60,9 @@ function setup() {
   create2020();
   create2021();
   d = width + height;
-  glitch = new Glitch();
-  glitch.loadType("jpg");
-//  glitch.loadImage("IMG_3596.jpg");
+  //  glitch = new Glitch();
+  //  glitch.loadType("jpg");
+  //  glitch.loadImage("IMG_3596.jpg");
 }
 
 function dataLoaded(json) {
@@ -285,29 +287,39 @@ function create2017() {
         .position(random(width * 0.6), random(height * 0.1, height * 0.6))
     );
     Q17.push(
-      createDiv(r.Q).style(
-        "font-family:Petit Formal Script;font-size:90%;height:3%"
-      )
+      createDiv(r.Q)
+        .style(
+          "font-family:Petit Formal Script;font-size:0.8em;height:3%;width=device-width, initial-scale=0.5;visibility:hidden"
+        )
+        .hide()
     );
     A17.push(
-      createDiv("A. " + r.A).style(
-        "cursor:pointer;font-family:Petit Formal Script;font-size:85%;height:3%"
-      )
+      createDiv("A. " + r.A)
+        .style(
+          "cursor:pointer;font-family:Petit Formal Script;font-size:0.8em;height:3%;visibility:hidden"
+        )
+        .hide()
     );
     B17.push(
-      createDiv("B. " + r.B).style(
-        "cursor:pointer;font-family:Petit Formal Script;font-size:85%;height:3%"
-      )
+      createDiv("B. " + r.B)
+        .style(
+          "cursor:pointer;font-family:Petit Formal Script;font-size:0.8em;height:3%;visibility:hidden"
+        )
+        .hide()
     );
     C17.push(
-      createDiv("C. " + r.C).style(
-        "cursor:pointer;font-family:Petit Formal Script;font-size:85%;height:3%"
-      )
+      createDiv("C. " + r.C)
+        .style(
+          "cursor:pointer;font-family:Petit Formal Script;font-size:0.8em;height:3%;visibility:hidden"
+        )
+        .hide()
     );
     D17.push(
-      createDiv("D. " + r.D).style(
-        "cursor:pointer;font-family:Petit Formal Script;font-size:85%;height:3%"
-      )
+      createDiv("D. " + r.D)
+        .style(
+          "cursor:pointer;font-family:Petit Formal Script;font-size:0.8em;height:3%;visibility:hidden"
+        )
+        .hide()
     );
   });
 }
@@ -318,51 +330,60 @@ function re2017() {
     )
     .show();
   back.show();
-  for (let i = 0; i < 4; i++) {
-    Q17[i].position(20 + ((i % 2) * width) / 2, height / 2 - height * 0.21);
-    A17[i].position(20 + ((i % 2) * width) / 2, height / 2 - height * 0.15);
-    B17[i].position(20 + ((i % 2) * width) / 2, height / 2 - height * 0.12);
-    C17[i].position(20 + ((i % 2) * width) / 2, height / 2 - height * 0.09);
-    D17[i].position(20 + ((i % 2) * width) / 2, height / 2 - height * 0.06);
-    if (i >= 2) {
-      Q17[i].position(20 + ((i % 2) * width) / 2, height / 2 + height * 0.06);
-      A17[i].position(20 + ((i % 2) * width) / 2, height / 2 + height * 0.12);
-      B17[i].position(20 + ((i % 2) * width) / 2, height / 2 + height * 0.15);
-      C17[i].position(20 + ((i % 2) * width) / 2, height / 2 + height * 0.18);
-      D17[i].position(20 + ((i % 2) * width) / 2, height / 2 + height * 0.21);
-    }
-  }
-  Q17.forEach((q) => {
-    q.show();
+  Q17.forEach((q, i) => {
+    q.position(20 + ((i % 2) * width) / 2, (floor(i / 2 + 1) * height) / 4)
+      .style("visibility:visible")
+      .show();
   });
   A17.forEach((a, i) => {
-    a.show()
+    a.position(
+      20 + ((i % 2) * width) / 2,
+      0.06 * height + floor(i / 2 + 1) * (height / 4)
+    )
+      .style("visibility:visible")
+      .show()
       .mouseOver(() => a.style("text-shadow: 0 0 3px grey"))
       .mouseOut(() => a.style("text-shadow:none"))
       .mousePressed(() => (Ac = i))
       .mouseClicked(() => a.style("color:#C80000"));
   });
   B17.forEach((b, i) => {
-    b.show()
+    b.position(
+      20 + ((i % 2) * width) / 2,
+      floor(i / 2 + 1) * (height / 4) + 0.09 * height
+    )
+      .style("visibility:visible")
+      .show()
       .mouseOver(() => b.style("text-shadow: 0 0 3px grey"))
       .mouseOut(() => b.style("text-shadow:none"))
       .mousePressed(() => (Bc = i))
       .mouseClicked(() => b.style("color:#C80000"));
   });
   C17.forEach((c, i) => {
-    c.show()
+    c.position(
+      20 + ((i % 2) * width) / 2,
+      floor(i / 2 + 1) * (height / 4) + 0.12 * height
+    )
+      .style("visibility:visible")
+      .show()
       .mouseOver(() => c.style("text-shadow: 0 0 3px grey"))
       .mouseOut(() => c.style("text-shadow:none"))
       .mousePressed(() => (Cc = i))
       .mouseClicked(() => c.style("color:#C80000"));
   });
   D17.forEach((d, i) => {
-    d.show()
+    d.position(
+      20 + ((i % 2) * width) / 2,
+      floor(i / 2 + 1) * (height / 4) + 0.15 * height
+    )
+      .style("visibility:visible")
+      .show()
       .mouseOver(() => d.style("text-shadow: 0 0 3px grey"))
       .mouseOut(() => d.style("text-shadow:none"))
       .mousePressed(() => (Dc = i))
       .mouseClicked(() => d.style("color:#C80000"));
   });
+
   if (Ac != undefined) {
     Aliner[Ac].style("visibility:visible")
       .show()
@@ -653,8 +674,6 @@ function create2020() {
     p20.push(c.line);
     pc.push(c.correct);
   });
-  let ps = [],
-    pu = [];
   ps = collage(p20).split("</span>");
   ps.forEach((p) => {
     pu.push(p + "</span>");
@@ -662,7 +681,7 @@ function create2020() {
   pu.forEach((p, i) => {
     psg.push(createDiv(p));
     psg[i]
-      .style("font-size:85%")
+      .style("font-size:85%;visibility:hidden")
       .position(
         random(width / 60, width / 40) + (i % 7) * width * 0.14,
         height * 0.05 * floor(i / 7 + 1) + height * 0.3 * random(0.98, 1.02)
@@ -678,7 +697,8 @@ function re2020() {
     .show();
   back.show();
   psg.forEach((p, i) => {
-    p.mouseOver(() => p.style("text-shadow: 1px 1px 3px white"))
+    p.style("visibility:visible")
+      .mouseOver(() => p.style("text-shadow: 1px 1px 3px white"))
       .mouseOut(() => p.style("text-shadow: none"))
       .mouseClicked(() =>
         p.html(pc[i]).mouseOver(() => p.style("text-shadow: 1px 1px 3px black"))

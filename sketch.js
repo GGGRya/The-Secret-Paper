@@ -385,7 +385,7 @@ function re2017() {
   });
 
   if (Ac != undefined) {
-    Aliner[Ac].style("visibility:visible")
+    Aliner[Ac].style("visibility:visible;z-index:1")
       .show()
       .mouseOver(() =>
         Aliner[Ac].position(
@@ -397,7 +397,7 @@ function re2017() {
     line(A17[Ac].x, A17[Ac].y, Aliner[Ac].x, Aliner[Ac].y);
   }
   if (Bc != undefined) {
-    Bliner[Bc].style("visibility:visible")
+    Bliner[Bc].style("visibility:visible;z-index:1")
       .show()
       .mouseOver(() =>
         Bliner[Bc].position(
@@ -409,7 +409,7 @@ function re2017() {
     line(B17[Bc].x, B17[Bc].y, Bliner[Bc].x, Bliner[Bc].y);
   }
   if (Cc != undefined) {
-    Cliner[Cc].style("visibility:visible")
+    Cliner[Cc].style("visibility:visible;z-index:1")
       .show()
       .mouseOver(() =>
         Cliner[Cc].position(
@@ -421,7 +421,7 @@ function re2017() {
     line(C17[Cc].x, C17[Cc].y, Cliner[Cc].x, Cliner[Cc].y);
   }
   if (Dc != undefined) {
-    Dliner[Dc].style("visibility:visible")
+    Dliner[Dc].style("visibility:visible;z-index:1")
       .show()
       .mouseOver(() =>
         Dliner[Dc].position(

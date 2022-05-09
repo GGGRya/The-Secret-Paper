@@ -24,10 +24,18 @@ let Alinez = [],
 let p20 = [];
 let psg = [];
 let pc = [];
+let t2021,
+  t = 0,
+  ts = 16,
+  c = 0;
+let arr2021 = [],
+  x2021 = [],
+  y2021 = [];
+let spreadRumor = false;
 let inst, caution, about, b2017, b2018, b2019, b2020, b2021, bXXXX, back;
 let fxxxx;
 let start = 0;
-let listening, reading, cloze, matching, correcting;
+let reading, cloze, matching, correcting;
 let readAbout = 0;
 let Ac, Bc, Cc, Dc;
 let d;
@@ -35,7 +43,8 @@ let index;
 let input, button;
 let paper;
 let glitch;
-
+let tx = 100,
+  ty = 100;
 function preload() {
   fxxxx = loadFont("assets/LibreBarcode39Text-Regular.ttf");
   loadJSON("papers.json", dataLoaded);
@@ -53,11 +62,10 @@ function setup() {
   create2020();
   create2021();
   d = width + height;
-  randomSeed(9999);
-/*  glitch = new Glitch();
+  /*glitch = new Glitch();
   loadImage("IMG_3596.jpg", function (im) {
     glitch.loadImage(im);
-  }); */
+  });*/
 }
 
 function dataLoaded(json) {
@@ -68,15 +76,14 @@ function dataLoaded(json) {
 }
 
 function draw() {
-   randomSeed(9999);
-/*  glitch.resetBytes();
+  /*  glitch.resetBytes();
   glitch.randomBytes(1);
   glitch.buildImage(); */
   background(240);
-//  image(glitch.image, 0, 0, width, height);
+  //  image(glitch.image, 0, 0, width, height);
   image(paper, 0, 0, width, height);
   if (start == 1) {
-
+    randomSeed(9999);
     hideCover();
     hide2018();
     hide2019();
@@ -84,7 +91,7 @@ function draw() {
     hide2021();
     re2017();
   } else if (start == 2) {
-
+    randomSeed(9999);
     hideCover();
     hide2017();
     hide2019();
@@ -92,7 +99,7 @@ function draw() {
     hide2021();
     re2018();
   } else if (start == 3) {
-
+    randomSeed(9999);
     hideCover();
     hide2017();
     hide2018();
@@ -100,7 +107,7 @@ function draw() {
     hide2021();
     re2019();
   } else if (start == 4) {
-
+    randomSeed(9999);
     hideCover();
     hide2017();
     hide2018();
@@ -125,10 +132,10 @@ function draw() {
   YorN();
 }
 function createCover() {
-  inst = createElement("h4", "");
-  back = createImg("button.png", "").style(
-    "cursor:pointer;height:6%;width:auto;box-shadow:0 2px 3px 0 black"
-  );
+  inst = createElement("h4", "").hide();
+  back = createImg("button.png", "")
+    .style("cursor:pointer;height:6%;width:auto;box-shadow:0 2px 3px 0 black")
+    .hide();
   b2017 = createButton("2017")
     .style(
       "border: none;color:black;cursor:pointer;font-family:Petit Formal Script;height:10%;font-size:120%;background:none"
@@ -201,10 +208,7 @@ function reCover() {
 function hideCover() {
   inst.position(20, height * 0.08);
   back.position(20, 20).mousePressed(() => (start = 0));
-  b2017
-    .hide()
-    .position(width * 0.48 - d / 5, height * 0.92)
-    .show();
+  b2017.position(width * 0.48 - d / 5, height * 0.92);
   b2018.position(width * 0.48 - d / 10, height * 0.92);
   b2019.position(width * 0.48, height * 0.92);
   b2020.position(width * 0.48 + d / 10, height * 0.92);
@@ -283,47 +287,47 @@ function create2017() {
   reading.forEach((r) => {
     Aliner.push(
       createElement("span", collage(r.Aline))
-        .style("padding:2%;visibility: hidden;z-index: 1")
+        .style("padding:2%;visibility: hidden;margin:0")
         .position(random(width * 0.6), random(height * 0.1, height * 0.75))
     );
     Bliner.push(
       createElement("span", collage(r.Bline))
-        .style("visibility: hidden;z-index: 1")
+        .style("visibility: hidden")
         .position(random(width * 0.6), random(height * 0.1, height * 0.75))
     );
     Cliner.push(
       createElement("span", collage(r.Cline))
-        .style("padding:1%;visibility: hidden;z-index: 1")
+        .style("padding:1%;visibility: hidden")
         .position(random(width * 0.6), random(height * 0.1, height * 0.75))
     );
     Dliner.push(
       createElement("span", collage(r.Dline))
-        .style("visibility: hidden;z-index: 1")
+        .style("visibility: hidden")
         .position(random(width * 0.6), random(height * 0.1, height * 0.6))
     );
     Q17.push(
       createElement("span", r.Q).style(
-        "font-family:Petit Formal Script;font-size:90%;height:3%;max-width:45%;z-index: 1"
+        "font-family:Petit Formal Script;font-size:90%;height:3%"
       )
     );
     A17.push(
       createElement("span", "A. " + r.A).style(
-        "cursor:pointer;font-family:Petit Formal Script;font-size:85%;height:3%;max-width:45%;z-index: 1"
+        "cursor:pointer;font-family:Petit Formal Script;font-size:85%;height:3%"
       )
     );
     B17.push(
       createElement("span", "B. " + r.B).style(
-        "cursor:pointer;font-family:Petit Formal Script;font-size:85%;height:3%;max-width:45%;z-index: 1"
+        "cursor:pointer;font-family:Petit Formal Script;font-size:85%;height:3%"
       )
     );
     C17.push(
       createElement("span", "C. " + r.C).style(
-        "cursor:pointer;font-family:Petit Formal Script;font-size:85%;height:3%;max-width:45%;z-index: 1"
+        "cursor:pointer;font-family:Petit Formal Script;font-size:85%;height:3%"
       )
     );
     D17.push(
       createElement("span", "D. " + r.D).style(
-        "cursor:pointer;font-family:Petit Formal Script;font-size:85%;height:3%;max-width:45%;z-index: 1"
+        "cursor:pointer;font-family:Petit Formal Script;font-size:85%;height:3%"
       )
     );
   });
@@ -385,7 +389,7 @@ function re2017() {
       .show()
       .mouseOver(() =>
         Aliner[Ac].position(
-          random(width * 0.6),
+          random(width * 0.3 * (Ac % 2)),
           random(height * 0.1, height * 0.75)
         )
       );
@@ -397,7 +401,7 @@ function re2017() {
       .show()
       .mouseOver(() =>
         Bliner[Bc].position(
-          random(width * 0.6),
+          random(width * 0.3 * (Bc % 2)),
           random(height * 0.1, height * 0.75)
         )
       );
@@ -409,7 +413,7 @@ function re2017() {
       .show()
       .mouseOver(() =>
         Cliner[Cc].position(
-          random(width * 0.6),
+          random(width * 0.3 * (Cc % 2)),
           random(height * 0.1, height * 0.75)
         )
       );
@@ -421,7 +425,7 @@ function re2017() {
       .show()
       .mouseOver(() =>
         Dliner[Dc].position(
-          random(width * 0.6),
+          random(width * 0.3 * (Dc % 2)),
           random(height * 0.1, height * 0.75)
         )
       );
@@ -525,37 +529,44 @@ function create2019() {
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
     .mouseOver(() => A19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => A19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + height / 16);
+    .position(width / 40, height / 4 + height / 16)
+    .hide();
   B19 = createDiv("B. " + matching[0].B)
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
     .mouseOver(() => B19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => B19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + (2 * height) / 16);
+    .position(width / 40, height / 4 + (2 * height) / 16)
+    .hide();
   C19 = createDiv("C. " + matching[0].C)
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
     .mouseOver(() => C19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => C19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + (3 * height) / 16);
+    .position(width / 40, height / 4 + (3 * height) / 16)
+    .hide();
   D19 = createDiv("D. " + matching[0].D)
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
     .mouseOver(() => D19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => D19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + (4 * height) / 16);
+    .position(width / 40, height / 4 + (4 * height) / 16)
+    .hide();
   E19 = createDiv("E. " + matching[0].E)
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
     .mouseOver(() => E19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => E19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + (5 * height) / 16);
+    .position(width / 40, height / 4 + (5 * height) / 16)
+    .hide();
   F19 = createDiv("F. " + matching[0].F)
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
     .mouseOver(() => F19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => F19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + (6 * height) / 16);
+    .position(width / 40, height / 4 + (6 * height) / 16)
+    .hide();
   G19 = createDiv("G. " + matching[0].G)
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
     .mouseOver(() => G19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => G19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + (7 * height) / 16);
+    .position(width / 40, height / 4 + (7 * height) / 16)
+    .hide();
 
   Am = createDiv(collage(matching[0].Aline)).style(
     "font-size:80%;visibility:hidden"
@@ -594,49 +605,50 @@ function re2019() {
   F19.show().mousePressed(() => (nM = 6));
   G19.show().mousePressed(() => (nM = 7));
   if (nM != undefined) {
+    stroke(200, 0, 0, random(200));
     if (nM == 1) {
       Am.style("visibility:visible")
         .position(random(width * 0.4, width * 0.7), height / 5)
         .show();
+      line(A19.x + 40, A19.y + 4, Am.x, Am.y);
     }
     if (nM == 2) {
       Bm.style("visibility:visible")
         .position(random(width * 0.4, width * 0.8), (height * 3) / 10)
         .show();
+      line(B19.x + 40, B19.y + 4, Bm.x, Bm.y);
     }
     if (nM == 3) {
       Cm.style("visibility:visible")
         .position(random(width * 0.4, width * 0.9), (height * 4) / 10)
         .show();
+      line(C19.x + 40, C19.y + 4, Cm.x, Cm.y);
     }
     if (nM == 4) {
       Dm.style("visibility:visible")
         .position(random(width * 0.4, width * 0.8), (height * 5) / 10)
         .show();
+
+      line(D19.x + 40, D19.y + 4, Dm.x, Dm.y);
     }
     if (nM == 5) {
       Em.style("visibility:visible")
         .position(random(width * 0.4, width * 0.9), (height * 6) / 10)
         .show();
+      line(E19.x + 40, E19.y + 4, Em.x, Em.y);
     }
     if (nM == 6) {
       Fm.style("visibility:visible")
         .position(random(width * 0.4, width * 0.8), (height * 7) / 10)
         .show();
+      line(F19.x + 40, F19.y + 4, Fm.x, Fm.y);
     }
     if (nM == 7) {
       Gm.style("visibility:visible")
         .position(random(width * 0.4, width * 0.7), (height * 7) / 9)
         .show();
+      line(G19.x + 40, G19.y + 4, Gm.x, Gm.y);
     }
-    stroke(200, 0, 0, random(200));
-    line(A19.x + 40, A19.y + 4, Am.x, Am.y);
-    line(B19.x + 40, B19.y + 4, Bm.x, Bm.y);
-    line(C19.x + 40, C19.y + 4, Cm.x, Cm.y);
-    line(D19.x + 40, D19.y + 4, Dm.x, Dm.y);
-    line(E19.x + 40, E19.y + 4, Em.x, Em.y);
-    line(F19.x + 40, F19.y + 4, Fm.x, Fm.y);
-    line(G19.x + 40, G19.y + 4, Gm.x, Gm.y);
   }
 }
 function hide2019() {
@@ -674,6 +686,7 @@ function create2020() {
         height * 0.05 * floor(i / 7 + 1) + height * 0.3 * random(0.98, 1.02)
       );
   }
+    console.log(psg.length);
 }
 function re2020() {
   inst
@@ -684,10 +697,13 @@ function re2020() {
   back.show();
   psg.forEach((p, i) => {
     p.mouseOver(() => p.style("text-shadow: 1px 1px 3px white"))
-      .mouseOut(() => p.style("text-shadow:none"))
-      .mouseClicked(() => p.html(pc[i]))
+      .mouseOut(() => p.style("text-shadow: none"))
+      .mouseClicked(() =>
+        p.html(pc[i]).mouseOver(() => p.style("text-shadow: 1px 1px 3px black"))
+      )
       .show();
   });
+
 }
 function hide2020() {
   inst.hide();
@@ -697,23 +713,55 @@ function hide2020() {
   });
 }
 function create2021() {
-  input = createInput("2021");
-  button = createButton("Submit");
+  input = createInput()
+    .size(width * 0.9, height / 3)
+    .hide();
+  button = createButton("Submit")
+    .mousePressed(() => (spreadRumor = true))
+    .mouseClicked(() => (ts = 16))
+    .hide();
 }
 function re2021() {
   inst
     .html(
-      "Writing. Write down a 100-word passage about your traning experience on the past-5-year exam papers."
+      "Writing. Write down 20-word sentence about your traning experience on the past-5-year exam papers, and the paper will make you a 100-word passage."
     )
     .show();
   back.show();
-  input.position(width / 60, height / 3);
-  input.style("font-family:Tahoma", "height:200px");
-  button.position(width / 60, height / 3 + 32);
-  button.style("font-family", "Tahoma");
-  button.style("cursor", "pointer");
-  input.show();
-  button.show();
+  input
+    .position(width / 40, height * 0.3)
+    .style("font-family:VT323", "height:200px")
+    .show();
+  button
+    .position(width / 40, height * 0.7)
+    .style("font-family:VT323;cursor:pointer")
+    .show();
+
+  if (spreadRumor) {
+    noStroke();
+    t2021 = input.value();
+    fill(c, lerp(5, 200, 0.5 + 0.5 * cos(t + tx / ty)));
+    textFont("VT323");
+    textSize(ts);
+    textAlign(CENTER, CENTER);
+    t += 0.05;
+    ts += 0.04;
+    if (ts <= 16.4) {
+      tx = random(width);
+      ty = random(height * 0.2, height * 0.8);
+      x2021.push(tx);
+      y2021.push(ty);
+      arr2021.push(t2021);
+    }
+    arr2021.forEach((a, i) => {
+      text(a, x2021[i], y2021[i]);
+    });
+  }
+}
+function wow() {
+  ts = 16;
+  tx = random(width);
+  ty = random(height * 0.2, height * 0.8);
 }
 function hide2021() {
   inst.hide();

@@ -138,7 +138,7 @@
   "correcting":[{
     "no":0,
     "line":"Today I tried ",
-    "correct":["I hate "]
+    "correct":["I hated "]
   },
                 {
     "no":1,
@@ -158,17 +158,17 @@
                 {
     "no":4,
     "line":"I like eating ",
-    "correct":["I like eating "]
+    "correct":["I love doing "]
   },
                 {
     "no":5,
     "line":"frying tomatoes ",
-    "correct":["fried tomatoes "]
+    "correct":["some imperfections "]
   },
                 {
     "no":6,
     "line":"with eggs, ",
-    "correct":["with eggs, "]
+    "correct":["with you, "]
   },
                 {
     "no":7,
@@ -181,67 +181,67 @@
       "correct":["it must "]
     },
                 {
-    "no":8,
+    "no":9,
     "line":"to be easy to cook. ",
-    "correct":["to be easy to cook. "]
+    "correct":["be easy to cook. "]
   },
                 {
-    "no":9,
+    "no":10,
     "line":"My mom told me ",
     "correct":["My mom told me "]
   },
                 {
-    "no":10,
-    "line":"how to ",
-    "correct":["how to "]
-  },
-                {
     "no":11,
-    "line":"preparing it. ",
-    "correct":["prepare it. "]
+    "line":"how to ",
+    "correct":["why she "]
   },
                 {
     "no":12,
+    "line":"preparing it. ",
+    "correct":["making it. "]
+  },
+                {
+    "no":13,
     "line":"First I cut the ",
     "correct":["First I cut the "]
   },
                 {
-    "no":13,
+    "no":14,
     "line":"tomatoes into pieces ",
-    "correct":["tomatoes into pieces "]
+    "correct":["conversation into a topic "]
   },
                 {
-    "no":14,
+    "no":15,
     "line":"but put them aside. ",
     "correct":["and put them aside. "]
   },
                 {
-    "no":15,
+    "no":16,
     "line":"Next I broke",
     "correct":["Next I broke"]
   },
                 {
-    "no":16,
+    "no":17,
     "line":"the eggs",
-    "correct":["the eggs"]                
+    "correct":["the 1970s "]                
                 },
                 {
-    "no":16,
+    "no":18,
     "line":"into a bowl and ",
-    "correct":["into a bowl and "]
+    "correct":["into account and "]
   },
                 {
-    "no":17,
+    "no":19,
     "line":"beat them quickly ",
     "correct":["beat them quickly "]
   },
                 {
-    "no":18,
+    "no":20,
     "line":"with chopstick. ",
-    "correct":["with chopsticks."]
+    "correct":["with young families."]
   },
                 {
-    "no":19,
+    "no":21,
     "line":"After that ",
     "correct":["After that "]
   },
@@ -251,80 +251,78 @@
     "correct":["I poured oil "]
   },
                 {
-    "no":20,
+    "no":22,
     "line":"into a pan and ",
-    "correct":["into a pan and "]
+    "correct":["into a topic and "]
   },
                 {
-    "no":21,
+    "no":23,
     "line":"turned off the stove. ",
     "correct":["turned on the stove. "]
   },
                 {
-    "no":22,
+    "no":24,
     "line":"I waited patiently ",
     "correct":["I waited patiently "]
   },  
                 {
-    "no":23,
+    "no":25,
     "line":"unless the",
     "correct":["until the"]
   },
                                 {
-    "no":23,
+    "no":26,
     "line":"oil was hot. ",
-    "correct":["oil was hot. "]
+    "correct":["collapse was disastrous. "]
   },
                 {
-    "no":24,
+    "no":27,
     "line":"Then I put ",
     "correct":["Then I put "]
   },
                 {
-    "no":25,
+    "no":28,
     "line":"the tomatoes and",
-    "correct":["the tomatoes and"]
+    "correct":["the summer and"]
   },
                                 {
-    "no":25,
+    "no":29,
     "line":"the beaten eggs ",
-    "correct":["the beaten eggs "]
+    "correct":["the future "]
   },
                 {
-    "no":26,
+    "no":30,
     "line":"into pan together. ",
     "correct":["into the pan together. "]
   },
                 {
-    "no":27,
-    "line":"＂Not that way，＂ ",
-    "correct":["＂Not that way，＂ "]
+    "no":31,
+    "line":"＂Not that way,＂ ",
+    "correct":["＂Not that way,＂ "]
   },
                 {
-    "no":28,
+    "no":32,
     "line":"my mom tried to stop us ",
     "correct":["my mom tried to stop us "]
   },
                 {
-    "no":29,
+    "no":33,
     "line":"but failed. ",
-    "correct":["but failed. "]
+    "correct":["but no luck. "]
   },
                 {
-    "no":30,
+    "no":34,
     "line":"She was right. ",
-    "correct":["She was right. "]
+    "correct":["She was eager. "]
   },
                 {
-    "no":31,
-    "line":"It didn’t tum out ",
-    "correct":["It didn’t tum out "]
+    "no":35,
+    "line":"It didn’t turn out ",
+    "correct":["It didn’t turn out "]
   },
                 {
-    "no":32,
+    "no":36,
     "line":"as I had wished. ",
-    "correct":["as I had wished. "]
+    "correct":["as humans. "]
   }                 ]
 }
-
-

@@ -60,9 +60,8 @@ function setup() {
   create2019();
   create2020();
   create2021();
-  if (width>height)
-  d =  height;
-  else d=width;
+  if (width > height) d = height;
+  else d = width;
 }
 
 function dataLoaded(json) {
@@ -173,7 +172,7 @@ function createCover() {
     .style(
       "cursor:pointer;color:white;background:black;border:none;animation: fadeIn 0.3s;box-shadow: 0 2px 2px  grey"
     )
-    .position(width *0.45, height * 0.78)
+    .position(width * 0.45, height * 0.78)
     .mouseOver(() => about.style("background:#C80000"))
     .mouseOut(() => about.style("background:black"))
     .mousePressed(showWindow)
@@ -224,7 +223,7 @@ function showWindow() {
     caution.remove();
     about
       .html("C A U T I O N !")
-      .position(width / 2 - about.width/2, height * 0.8);
+      .position(width / 2 - about.width / 2, height * 0.8);
   }
 }
 
@@ -267,55 +266,55 @@ function randomFont(arr) {
 function create2017() {
   reading.forEach((r) => {
     Aliner.push(
-      createElement("span",collage(r.Aline))
-        .style("width:50%;visibility: hidden")
+      createElement("span", collage(r.Aline))
+        .style("width:60%;visibility: hidden")
         .position(random(width * 0.6), random(height * 0.1, height * 0.75))
     );
     Bliner.push(
-      createElement("span",collage(r.Bline))
-        .style("width:50%;visibility: hidden")
+      createElement("span", collage(r.Bline))
+        .style("width:60%;visibility: hidden")
         .position(random(width * 0.6), random(height * 0.1, height * 0.75))
     );
     Cliner.push(
-      createElement("span",collage(r.Cline))
-        .style("width:50%;visibility: hidden")
+      createElement("span", collage(r.Cline))
+        .style("width:60%;visibility: hidden")
         .position(random(width * 0.6), random(height * 0.1, height * 0.75))
     );
     Dliner.push(
-      createElement("span",collage(r.Dline))
-        .style("width:50%;visibility: hidden")
+      createElement("span", collage(r.Dline))
+        .style("width:60%;visibility: hidden")
         .position(random(width * 0.6), random(height * 0.1, height * 0.6))
     );
     Q17.push(
-      createElement("span",r.Q)
+      createElement("span", r.Q)
         .style(
           "font-family:Petit Formal Script;font-size:70%;height:3%;width:48%;visibility:hidden"
         )
         .hide()
     );
     A17.push(
-      createElement("span", "A. "+r.A)
+      createElement("span", "A. " + r.A)
         .style(
           "cursor:pointer;font-family:Petit Formal Script;font-size:70%;height:3%;width:48%;visibility:hidden"
         )
         .hide()
     );
     B17.push(
-      createElement("span","B. " + r.B)
+      createElement("span", "B. " + r.B)
         .style(
           "cursor:pointer;font-family:Petit Formal Script;font-size:70%;height:3%;width:48%;visibility:hidden"
         )
         .hide()
     );
     C17.push(
-      createElement("span","C. " + r.C)
+      createElement("span", "C. " + r.C)
         .style(
           "cursor:pointer;font-family:Petit Formal Script;font-size:70%;height:3%;width:48%;visibility:hidden"
         )
         .hide()
     );
     D17.push(
-      createElement("span","D. " + r.D)
+      createElement("span", "D. " + r.D)
         .style(
           "cursor:pointer;font-family:Petit Formal Script;font-size:70%;height:3%;width:48%;visibility:hidden"
         )
@@ -331,14 +330,14 @@ function re2017() {
     .show();
   back.show();
   Q17.forEach((q, i) => {
-    q.position(20 + ((i % 2) * width) *0.48, (floor(i / 2 + 1) * height) / 3.7)
+    q.position(20 + (i % 2) * width * 0.48, height/4+(floor(i / 2) * height) / 3.6)
       .style("visibility:visible")
       .show();
   });
   A17.forEach((a, i) => {
     a.position(
-      20 + ((i % 2) * width) *0.48,
-    floor(i / 2 + 1) * (height / 3.7)+0.08*d
+      20 + (i % 2) * width * 0.48,
+      height/4+(floor(i / 2) * height) / 3.6 + 0.08 * d
     )
       .style("visibility:visible")
       .show()
@@ -349,8 +348,8 @@ function re2017() {
   });
   B17.forEach((b, i) => {
     b.position(
-      20 + ((i % 2) * width) *0.48,
-      floor(i / 2 + 1) * (height / 3.7) + 0.12*d
+      20 + (i % 2) * width * 0.48,
+      height/4+(floor(i / 2) * height) / 3.6 + 0.12 * d
     )
       .style("visibility:visible")
       .show()
@@ -361,8 +360,8 @@ function re2017() {
   });
   C17.forEach((c, i) => {
     c.position(
-      20 + ((i % 2) * width) *0.48,
-      floor(i / 2 + 1) * (height / 3.7) + 0.16*d
+      20 + (i % 2) * width * 0.48,
+      height/4+(floor(i / 2) * height) / 3.6 + 0.16 * d
     )
       .style("visibility:visible")
       .show()
@@ -373,8 +372,8 @@ function re2017() {
   });
   D17.forEach((dn, i) => {
     dn.position(
-      20 + ((i % 2) * width) *0.48,
-      floor(i / 2 + 1) * (height / 3.7) + 0.20*d
+      20 + (i % 2) * width * 0.48,
+      height/4+(floor(i / 2) * height) / 3.6 + 0.2 * d
     )
       .style("visibility:visible")
       .show()
@@ -389,8 +388,8 @@ function re2017() {
       .show()
       .mouseOver(() =>
         Aliner[Ac].position(
-          random(width*0.05)+width * 0.4 * (Ac % 2),
-          random(height*0.1)+height*0.8*floor(Ac/2)
+          random(width * 0.1) + width * 0.4 * (Ac % 2),
+          random(height * 0.05,height * 0.1) + height * 0.68 * floor(Ac / 2)
         )
       );
     stroke(200, 0, 0, random(50, 250));
@@ -401,8 +400,8 @@ function re2017() {
       .show()
       .mouseOver(() =>
         Bliner[Bc].position(
-          random(width*0.05)+width * 0.4 * (Bc % 2),
-          random(height*0.1)+height*0.8*floor(Bc/2)
+          random(width * 0.1) + width * 0.4 * (Bc % 2),
+          random(height * 0.05,height * 0.1) + height * 0.68 * floor(Bc / 2)
         )
       );
     stroke(200, 0, 0, random(50, 250));
@@ -413,8 +412,8 @@ function re2017() {
       .show()
       .mouseOver(() =>
         Cliner[Cc].position(
-          random(width*0.05)+width * 0.4 * (Cc % 2),
-          random(height*0.1)+height*0.8*floor(Cc/2)
+          random(width * 0.1) + width * 0.4 * (Cc % 2),
+          random(height * 0.05,height * 0.1) + height * 0.68 * floor(Cc / 2)
         )
       );
     stroke(200, 0, 0, random(50, 250));
@@ -425,8 +424,8 @@ function re2017() {
       .show()
       .mouseOver(() =>
         Dliner[Dc].position(
-          random(width*0.05)+width * 0.4 * (Dc % 2),
-          random(height*0.1)+height*0.8*floor(Dc/2)
+          random(width * 0.1) + width * 0.4 * (Dc % 2),
+          random(height * 0.05,height * 0.1) + height * 0.68 * floor(Dc / 2)
         )
       );
     stroke(200, 0, 0, random(50, 250));
@@ -476,7 +475,7 @@ function create2018() {
         createDiv(abcd[i] + clzC[j][i])
           .position(
             width / 40 + (i * width) / 10,
-            height / 4.2 + (j * height) / 15-(i%2)*height/80
+            height / 4.2 + (j * height) / 15 - ((i % 2) * height) / 80
           )
           .style(
             "font-family:Special Elite;font-size:75%;cursor:pointer:max-width:auto"
@@ -489,7 +488,7 @@ function create2018() {
           .style("font-size:90%;visibility:hidden")
           .position(
             random(width * 0.3, width * 0.6),
-            random(height / 8, height / 6) + (j * height) / 15
+            random(height / 8, height / 7.5) + (j * height) / 12
           )
       );
     }
@@ -525,68 +524,68 @@ function hide2018() {
   });
 }
 function create2019() {
-  A19 = createElement("span","A. " + matching[0].A)
+  A19 = createElement("span", "A. " + matching[0].A)
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => A19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => A19.style("text-shadow:none"))
     .position(width / 40, height / 5.8 + height / 11)
     .hide();
-  B19 = createElement("span","B. " + matching[0].B)
+  B19 = createElement("span", "B. " + matching[0].B)
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => B19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => B19.style("text-shadow:none"))
     .position(width / 40, height / 5.8 + (2 * height) / 11)
     .hide();
-  C19 = createElement("span","C. " + matching[0].C)
+  C19 = createElement("span", "C. " + matching[0].C)
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => C19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => C19.style("text-shadow:none"))
     .position(width / 40, height / 5.8 + (3 * height) / 11)
     .hide();
-  D19 = createElement("span","D. " + matching[0].D)
+  D19 = createElement("span", "D. " + matching[0].D)
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => D19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => D19.style("text-shadow:none"))
     .position(width / 40, height / 5.8 + (4 * height) / 11)
     .hide();
-  E19 = createElement("span","E. " + matching[0].E)
+  E19 = createElement("span", "E. " + matching[0].E)
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => E19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => E19.style("text-shadow:none"))
     .position(width / 40, height / 5.8 + (5 * height) / 11)
     .hide();
-  F19 = createElement("span","F. " + matching[0].F)
+  F19 = createElement("span", "F. " + matching[0].F)
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => F19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => F19.style("text-shadow:none"))
     .position(width / 40, height / 5.8 + (6 * height) / 11)
     .hide();
-  G19 = createElement("span","G. " + matching[0].G)
+  G19 = createElement("span", "G. " + matching[0].G)
     .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => G19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => G19.style("text-shadow:none"))
     .position(width / 40, height / 5.8 + (7 * height) / 11)
     .hide();
 
-  Am = createElement("span",collage(matching[0].Aline)).style(
+  Am = createElement("span", collage(matching[0].Aline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Bm = createElement("span",collage(matching[0].Bline)).style(
+  Bm = createElement("span", collage(matching[0].Bline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Cm = createElement("span",collage(matching[0].Cline)).style(
+  Cm = createElement("span", collage(matching[0].Cline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Dm = createElement("span",collage(matching[0].Dline)).style(
+  Dm = createElement("span", collage(matching[0].Dline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Em = createElement("span",collage(matching[0].Eline)).style(
+  Em = createElement("span", collage(matching[0].Eline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Fm = createElement("span",collage(matching[0].Fline)).style(
+  Fm = createElement("span", collage(matching[0].Fline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Gm = createElement("span",collage(matching[0].Gline)).style(
+  Gm = createElement("span", collage(matching[0].Gline)).style(
     "font-size:80%;visibility:hidden"
   );
 }
@@ -607,44 +606,44 @@ function re2019() {
   if (nM != undefined) {
     stroke(200, 0, 0, random(200));
     if (nM == 1) {
-      Am.style("visibility:visible")
-        .position(random(width * 0.4, width * 0.7), (height * 3) / 10)
+      Am.style("visibility:visible;font-size:80%")
+        .position(random(width * 0.4, width * 0.7), (height * 2.8) / 10)
         .show();
       line(A19.x + 40, A19.y + 4, Am.x, Am.y);
     }
     if (nM == 2) {
-      Bm.style("visibility:visible")
+      Bm.style("visibility:visible;")
         .position(random(width * 0.4, width * 0.8), (height * 4) / 10)
         .show();
       line(B19.x + 40, B19.y + 4, Bm.x, Bm.y);
     }
     if (nM == 3) {
-      Cm.style("visibility:visible")
+      Cm.style("visibility:visible;font-size:75%")
         .position(random(width * 0.4, width * 0.9), (height * 6) / 10)
         .show();
       line(C19.x + 40, C19.y + 4, Cm.x, Cm.y);
     }
     if (nM == 4) {
-      Dm.style("visibility:visible")
-        .position(random(width * 0.4, width * 0.8), (height * 5) / 10)
+      Dm.style("visibility:visible;font-size:75%")
+        .position(random(width * 0.4, width * 0.8), (height * 4.8) / 10)
         .show();
 
       line(D19.x + 40, D19.y + 4, Dm.x, Dm.y);
     }
     if (nM == 5) {
-      Em.style("visibility:visible")
-        .position(random(width * 0.4, width * 0.9), height/5)
+      Em.style("visibility:visible;font-size:75%")
+        .position(random(width * 0.4, width * 0.9), height / 5)
         .show();
       line(E19.x + 40, E19.y + 4, Em.x, Em.y);
     }
     if (nM == 6) {
-      Fm.style("visibility:visible")
+      Fm.style("visibility:visible;")
         .position(random(width * 0.4, width * 0.8), (height * 7) / 10)
         .show();
       line(F19.x + 40, F19.y + 4, Fm.x, Fm.y);
     }
     if (nM == 7) {
-      Gm.style("visibility:visible")
+      Gm.style("visibility:visible;font-size:75%")
         .position(random(width * 0.4, width * 0.7), (height * 8) / 10)
         .show();
       line(G19.x + 40, G19.y + 4, Gm.x, Gm.y);

@@ -267,23 +267,23 @@ function randomFont(arr) {
 function create2017() {
   reading.forEach((r) => {
     Aliner.push(
-      createDiv(collage(r.Aline))
-        .style("visibility: hidden")
+      createElement("span",collage(r.Aline))
+        .style("width:50%;visibility: hidden")
         .position(random(width * 0.6), random(height * 0.1, height * 0.75))
     );
     Bliner.push(
-      createDiv(collage(r.Bline))
-        .style("visibility: hidden")
+      createElement("span",collage(r.Bline))
+        .style("width:50%;visibility: hidden")
         .position(random(width * 0.6), random(height * 0.1, height * 0.75))
     );
     Cliner.push(
-      createDiv(collage(r.Cline))
-        .style("visibility: hidden")
+      createElement("span",collage(r.Cline))
+        .style("width:50%;visibility: hidden")
         .position(random(width * 0.6), random(height * 0.1, height * 0.75))
     );
     Dliner.push(
-      createDiv(collage(r.Dline))
-        .style("visibility: hidden")
+      createElement("span",collage(r.Dline))
+        .style("width:50%;visibility: hidden")
         .position(random(width * 0.6), random(height * 0.1, height * 0.6))
     );
     Q17.push(
@@ -389,8 +389,8 @@ function re2017() {
       .show()
       .mouseOver(() =>
         Aliner[Ac].position(
-          random(width * 0.3 * (Ac % 2)),
-          random(height * 0.1, height * 0.75)
+          random(width*0.05)+width * 0.4 * (Ac % 2),
+          random(height*0.1)+height*0.8*floor(Ac/2)
         )
       );
     stroke(200, 0, 0, random(50, 250));
@@ -401,8 +401,8 @@ function re2017() {
       .show()
       .mouseOver(() =>
         Bliner[Bc].position(
-          random(width * 0.3 * (Bc % 2)),
-          random(height * 0.1, height * 0.75)
+          random(width*0.05)+width * 0.4 * (Bc % 2),
+          random(height*0.1)+height*0.8*floor(Bc/2)
         )
       );
     stroke(200, 0, 0, random(50, 250));
@@ -413,8 +413,8 @@ function re2017() {
       .show()
       .mouseOver(() =>
         Cliner[Cc].position(
-          random(width * 0.3 * (Cc % 2)),
-          random(height * 0.1, height * 0.75)
+          random(width*0.05)+width * 0.4 * (Cc % 2),
+          random(height*0.1)+height*0.8*floor(Cc/2)
         )
       );
     stroke(200, 0, 0, random(50, 250));
@@ -425,8 +425,8 @@ function re2017() {
       .show()
       .mouseOver(() =>
         Dliner[Dc].position(
-          random(width * 0.3 * (Dc % 2)),
-          random(height * 0.1, height * 0.75)
+          random(width*0.05)+width * 0.4 * (Dc % 2),
+          random(height*0.1)+height*0.8*floor(Dc/2)
         )
       );
     stroke(200, 0, 0, random(50, 250));

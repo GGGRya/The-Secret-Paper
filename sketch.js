@@ -183,7 +183,7 @@ function reCover() {
   fill(0);
   textStyle(BOLD);
   textFont(fxxxx);
-  textSize(d / 10);
+  textSize(d / 9);
   text("The Secret Paper", width / 2, height / 2.2);
   noFill();
   stroke(0);

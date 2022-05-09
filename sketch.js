@@ -24,6 +24,7 @@ let Alinez = [],
 let p20 = [];
 let psg = [];
 let pc = [];
+
 let t2021,
   t = 0,
   ts = 16,
@@ -41,20 +42,20 @@ let Ac, Bc, Cc, Dc;
 let d;
 let index;
 let input, button;
-let paper;
+let img;
 let glitch;
 let tx = 100,
   ty = 100;
 function preload() {
   fxxxx = loadFont("assets/LibreBarcode39Text-Regular.ttf");
   loadJSON("papers.json", dataLoaded);
-  paper = loadImage("IMG_3596.jpg");
+  img = loadImage("IMG_3596.jpg");
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  textAlign(CENTER, BOTTOM);
   background(230);
+  textAlign(CENTER, BOTTOM);
   createCover();
   create2017();
   create2018();
@@ -64,6 +65,7 @@ function setup() {
   d = width + height;
   glitch = new Glitch();
   glitch.loadType("jpg");
+//  glitch.loadImage("IMG_3596.jpg");
 }
 
 function dataLoaded(json) {
@@ -74,16 +76,8 @@ function dataLoaded(json) {
 }
 
 function draw() {
-  background(240);
-  /* glitch.resetBytes();
-  glitch.randomBytes(10);
-  glitch.buildImage();
-  glitch.buildImage(function (img) {
-    background(240);
-    image(img, 0, 0, width, height);
-  });*/
-  //  image(glitch.image, 0, 0, width, height);
-  image(paper, 0, 0, width, height);
+  background(230);
+  image(img, 0, 0, width, height);
   if (start == 1) {
     randomSeed(9999);
     hideCover();
@@ -236,19 +230,7 @@ function showWindow() {
       .position(width / 2 - width * 0.05, height * 0.8);
   }
 }
-function collagesp(arr) {
-  let arrsp = [];
-  for (let i = 0; i < arr.length; i++) {
-    arrsp.push(
-      `<span style="color:white; padding:3px;background-color:${randColor(
-        arr
-      )};font-family:${randomFont(arr)}">` +
-        arr[i] +
-        `</span> `
-    );
-  }
-  return arrsp;
-}
+
 function collage(arr) {
   let str = "";
   for (let i = 0; i < arr.length; i++) {
@@ -289,7 +271,7 @@ function create2017() {
   reading.forEach((r) => {
     Aliner.push(
       createElement("span", collage(r.Aline))
-        .style("padding:2%;visibility: hidden;margin:0")
+        .style("padding:2%;visibility: hidden")
         .position(random(width * 0.6), random(height * 0.1, height * 0.75))
     );
     Bliner.push(
@@ -676,18 +658,21 @@ function create2020() {
     p20.push(c.line);
     pc.push(c.correct);
   });
-  let p = collagesp(p20);
-  p.forEach((p) => {
-    psg.push(createDiv(p));
+  let ps = [],
+    pu = [];
+  ps = collage(p20).split("</span>");
+  ps.forEach((p) => {
+    pu.push(p + "</span>");
   });
-  for (let i = 0; i < psg.length; i++) {
+  pu.forEach((p, i) => {
+    psg.push(createDiv(p));
     psg[i]
       .style("font-size:85%")
       .position(
         random(width / 60, width / 40) + (i % 7) * width * 0.14,
         height * 0.05 * floor(i / 7 + 1) + height * 0.3 * random(0.98, 1.02)
       );
-  }
+  });
   console.log(psg.length);
 }
 function re2020() {

@@ -60,7 +60,9 @@ function setup() {
   create2019();
   create2020();
   create2021();
-  d = width + height;
+  if (width>height)
+  d =  height;
+  else d=width;
 }
 
 function dataLoaded(json) {
@@ -171,7 +173,7 @@ function createCover() {
     .style(
       "cursor:pointer;color:white;background:black;border:none;animation: fadeIn 0.3s;box-shadow: 0 2px 2px  grey"
     )
-    .position(width / 2 - width * 0.05, height * 0.8)
+    .position(width *0.45, height * 0.78)
     .mouseOver(() => about.style("background:#C80000"))
     .mouseOut(() => about.style("background:black"))
     .mousePressed(showWindow)
@@ -182,28 +184,28 @@ function reCover() {
   fill(0);
   textStyle(BOLD);
   textFont(fxxxx);
-  textSize(d / 18);
-  text("The Secret Paper", width / 2, height / 2);
+  textSize(d / 10);
+  text("The Secret Paper", width / 2, height / 2.2);
   noFill();
   stroke(0);
-  strokeWeight(d / 2000);
-  textSize(d / 40);
-  text("of", width * 0.58, height * 0.58);
+  strokeWeight(d / 1000);
+  textSize(d / 18);
+  text("of", width * 0.58, height * 0.54);
   about.show();
-  b2017.position(width * 0.48 - d / 5, height / 2 + 25).show();
-  b2018.position(width * 0.48 - d / 10, height / 2 + 25).show();
-  b2019.position(width * 0.48, height / 2 + 25).show();
-  b2020.position(width * 0.48 + d / 10, height / 2 + 25).show();
-  b2021.position(width * 0.48 + d / 5, height / 2 + 25).show();
+  b2017.position(width * 0.46 - d / 2.8, height / 2 + 25).show();
+  b2018.position(width * 0.46 - d / 5, height / 2 + 25).show();
+  b2019.position(width * 0.46, height / 2 + 25).show();
+  b2020.position(width * 0.46 + d / 5, height / 2 + 25).show();
+  b2021.position(width * 0.46 + d / 2.8, height / 2 + 25).show();
 }
 function hideCover() {
-  inst.position(20, height * 0.08);
+  inst.position(20, height * 0.1);
   back.position(20, 20).mousePressed(() => (start = 0));
-  b2017.position(width * 0.48 - d / 5, height * 0.92);
-  b2018.position(width * 0.48 - d / 10, height * 0.92);
-  b2019.position(width * 0.48, height * 0.92);
-  b2020.position(width * 0.48 + d / 10, height * 0.92);
-  b2021.position(width * 0.48 + d / 5, height * 0.92);
+  b2017.position(width * 0.46 - d / 2.8, height * 0.92);
+  b2018.position(width * 0.46 - d / 5, height * 0.92);
+  b2019.position(width * 0.46, height * 0.92);
+  b2020.position(width * 0.46 + d / 5, height * 0.92);
+  b2021.position(width * 0.46 + d / 2.8, height * 0.92);
   about.hide();
 }
 function showWindow() {
@@ -214,15 +216,15 @@ function showWindow() {
       "This is the secret paper for the college entrance examination. You will find all options reasonable in this mock exam. Be sure of your answer and make path for them. Congratulations!</br></br>The Secret Paper（密卷）is an interactive digital literary artwork inspired by the English exam of the National College Entrance Examination in mainland China. While preparing for the National College Entrance Examination (Gao Kao高考), a secret paper（密卷）is usually an unpublished paper that we take in a mock examination. And the digital paper here is divided into five units, which are taken from the original questions of 2017, 2018, 2019, 2020, and 2021 college entrance exams, where each option in this work can be the correct answer. I have pieced together reasonable explanations for each answer by integrating the text of the past five years' college entrance exam papers, and users can access the explanation of each option by clicking on the interface. By comparing the official single explanation of the correct option with the diverse explanations of the other options that the text of the exam paper has pieced together, I wanted to express in this work the desecration of human nature and individual potential by exam-oriented education, and to give a little comfort to those who have inadvertently chosen the incorrect goal: we can look for creative solutions beyond the patterned trajectory of life and the boundaries of time."
     )
       .style(
-        "background-color:grey;overflow: auto;padding:5%;width:85%;height:30%;line-height:200%;animation:fadeIn 0.2s;"
+        "background-color:grey;overflow: auto;padding:2%;width:80%;height:30%;line-height:200%"
       )
-      .position(width * 0.025, height / 4);
+      .position(width * 0.08, height / 4);
     about.html("I UNDERSTAND").position(width / 2 - width * 0.05, height * 0.8);
   } else if (readAbout % 2 == 0) {
     caution.remove();
     about
       .html("C A U T I O N !")
-      .position(width / 2 - width * 0.05, height * 0.8);
+      .position(width / 2 - about.width/2, height * 0.8);
   }
 }
 
@@ -285,37 +287,37 @@ function create2017() {
         .position(random(width * 0.6), random(height * 0.1, height * 0.6))
     );
     Q17.push(
-      createDiv(r.Q)
+      createElement("span",r.Q)
         .style(
-          "font-family:Petit Formal Script;font-size:0.8em;height:3%;width=device-width, initial-scale=0.5;visibility:hidden"
+          "font-family:Petit Formal Script;font-size:70%;height:3%;width:48%;visibility:hidden"
         )
         .hide()
     );
     A17.push(
-      createDiv("A. " + r.A)
+      createElement("span", "A. "+r.A)
         .style(
-          "cursor:pointer;font-family:Petit Formal Script;font-size:0.8em;height:3%;visibility:hidden"
+          "cursor:pointer;font-family:Petit Formal Script;font-size:70%;height:3%;width:48%;visibility:hidden"
         )
         .hide()
     );
     B17.push(
-      createDiv("B. " + r.B)
+      createElement("span","B. " + r.B)
         .style(
-          "cursor:pointer;font-family:Petit Formal Script;font-size:0.8em;height:3%;visibility:hidden"
+          "cursor:pointer;font-family:Petit Formal Script;font-size:70%;height:3%;width:48%;visibility:hidden"
         )
         .hide()
     );
     C17.push(
-      createDiv("C. " + r.C)
+      createElement("span","C. " + r.C)
         .style(
-          "cursor:pointer;font-family:Petit Formal Script;font-size:0.8em;height:3%;visibility:hidden"
+          "cursor:pointer;font-family:Petit Formal Script;font-size:70%;height:3%;width:48%;visibility:hidden"
         )
         .hide()
     );
     D17.push(
-      createDiv("D. " + r.D)
+      createElement("span","D. " + r.D)
         .style(
-          "cursor:pointer;font-family:Petit Formal Script;font-size:0.8em;height:3%;visibility:hidden"
+          "cursor:pointer;font-family:Petit Formal Script;font-size:70%;height:3%;width:48%;visibility:hidden"
         )
         .hide()
     );
@@ -329,14 +331,14 @@ function re2017() {
     .show();
   back.show();
   Q17.forEach((q, i) => {
-    q.position(20 + ((i % 2) * width) / 2, (floor(i / 2 + 1) * height) / 4)
+    q.position(20 + ((i % 2) * width) *0.48, (floor(i / 2 + 1) * height) / 3.7)
       .style("visibility:visible")
       .show();
   });
   A17.forEach((a, i) => {
     a.position(
-      20 + ((i % 2) * width) / 2,
-      0.06 * height + floor(i / 2 + 1) * (height / 4)
+      20 + ((i % 2) * width) *0.48,
+    floor(i / 2 + 1) * (height / 3.7)+0.08*d
     )
       .style("visibility:visible")
       .show()
@@ -347,8 +349,8 @@ function re2017() {
   });
   B17.forEach((b, i) => {
     b.position(
-      20 + ((i % 2) * width) / 2,
-      floor(i / 2 + 1) * (height / 4) + 0.09 * height
+      20 + ((i % 2) * width) *0.48,
+      floor(i / 2 + 1) * (height / 3.7) + 0.12*d
     )
       .style("visibility:visible")
       .show()
@@ -359,8 +361,8 @@ function re2017() {
   });
   C17.forEach((c, i) => {
     c.position(
-      20 + ((i % 2) * width) / 2,
-      floor(i / 2 + 1) * (height / 4) + 0.12 * height
+      20 + ((i % 2) * width) *0.48,
+      floor(i / 2 + 1) * (height / 3.7) + 0.16*d
     )
       .style("visibility:visible")
       .show()
@@ -369,17 +371,17 @@ function re2017() {
       .mousePressed(() => (Cc = i))
       .mouseClicked(() => c.style("color:#C80000"));
   });
-  D17.forEach((d, i) => {
-    d.position(
-      20 + ((i % 2) * width) / 2,
-      floor(i / 2 + 1) * (height / 4) + 0.15 * height
+  D17.forEach((dn, i) => {
+    dn.position(
+      20 + ((i % 2) * width) *0.48,
+      floor(i / 2 + 1) * (height / 3.7) + 0.20*d
     )
       .style("visibility:visible")
       .show()
-      .mouseOver(() => d.style("text-shadow: 0 0 3px grey"))
-      .mouseOut(() => d.style("text-shadow:none"))
+      .mouseOver(() => dn.style("text-shadow: 0 0 3px grey"))
+      .mouseOut(() => dn.style("text-shadow:none"))
       .mousePressed(() => (Dc = i))
-      .mouseClicked(() => d.style("color:#C80000"));
+      .mouseClicked(() => dn.style("color:#C80000"));
   });
 
   if (Ac != undefined) {
@@ -473,8 +475,8 @@ function create2018() {
       clzD.push(
         createDiv(abcd[i] + clzC[j][i])
           .position(
-            width / 60 + (i * width) / 10,
-            height / 5 + (j * height) / 15
+            width / 40 + (i * width) / 10,
+            height / 4.2 + (j * height) / 15-(i%2)*height/80
           )
           .style(
             "font-family:Special Elite;font-size:75%;cursor:pointer:max-width:auto"
@@ -523,68 +525,68 @@ function hide2018() {
   });
 }
 function create2019() {
-  A19 = createDiv("A. " + matching[0].A)
-    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
+  A19 = createElement("span","A. " + matching[0].A)
+    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => A19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => A19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + height / 16)
+    .position(width / 40, height / 5.8 + height / 11)
     .hide();
-  B19 = createDiv("B. " + matching[0].B)
-    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
+  B19 = createElement("span","B. " + matching[0].B)
+    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => B19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => B19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + (2 * height) / 16)
+    .position(width / 40, height / 5.8 + (2 * height) / 11)
     .hide();
-  C19 = createDiv("C. " + matching[0].C)
-    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
+  C19 = createElement("span","C. " + matching[0].C)
+    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => C19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => C19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + (3 * height) / 16)
+    .position(width / 40, height / 5.8 + (3 * height) / 11)
     .hide();
-  D19 = createDiv("D. " + matching[0].D)
-    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
+  D19 = createElement("span","D. " + matching[0].D)
+    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => D19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => D19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + (4 * height) / 16)
+    .position(width / 40, height / 5.8 + (4 * height) / 11)
     .hide();
-  E19 = createDiv("E. " + matching[0].E)
-    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
+  E19 = createElement("span","E. " + matching[0].E)
+    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => E19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => E19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + (5 * height) / 16)
+    .position(width / 40, height / 5.8 + (5 * height) / 11)
     .hide();
-  F19 = createDiv("F. " + matching[0].F)
-    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
+  F19 = createElement("span","F. " + matching[0].F)
+    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => F19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => F19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + (6 * height) / 16)
+    .position(width / 40, height / 5.8 + (6 * height) / 11)
     .hide();
-  G19 = createDiv("G. " + matching[0].G)
-    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer")
+  G19 = createElement("span","G. " + matching[0].G)
+    .style("font-family:Reenie Beanie;font-size:120%;cursor:pointer;width:50%")
     .mouseOver(() => G19.style("text-shadow: 0 0 3px grey"))
     .mouseOut(() => G19.style("text-shadow:none"))
-    .position(width / 40, height / 4 + (7 * height) / 16)
+    .position(width / 40, height / 5.8 + (7 * height) / 11)
     .hide();
 
-  Am = createDiv(collage(matching[0].Aline)).style(
+  Am = createElement("span",collage(matching[0].Aline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Bm = createDiv(collage(matching[0].Bline)).style(
+  Bm = createDiv("span",collage(matching[0].Bline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Cm = createDiv(collage(matching[0].Cline)).style(
+  Cm = createDiv("span",collage(matching[0].Cline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Dm = createDiv(collage(matching[0].Dline)).style(
+  Dm = createDiv("span",collage(matching[0].Dline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Em = createDiv(collage(matching[0].Eline)).style(
+  Em = createDiv("span",collage(matching[0].Eline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Fm = createDiv(collage(matching[0].Fline)).style(
+  Fm = createDiv("span",collage(matching[0].Fline)).style(
     "font-size:80%;visibility:hidden"
   );
-  Gm = createDiv(collage(matching[0].Gline)).style(
+  Gm = createDiv("span",collage(matching[0].Gline)).style(
     "font-size:80%;visibility:hidden"
   );
 }

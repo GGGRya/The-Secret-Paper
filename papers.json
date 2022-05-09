@@ -43,8 +43,8 @@
       "B": "Media Interest in Contemporary Art",
       "C": "Responsibility Demanded of Big Companies",
       "D": "Ocean Plastics Transformed into Sculptures",
-      "Aline": ["What","will disappear gradually","?"],
-      "Bline": ["What is","growing faster","?"],
+      "Aline": ["What is","growing faster","among the","artists","?"],
+      "Bline": ["What","will disappear gradually","?"],
       "Cline": ["Tell","me","interesting stories","."],
       "Dline": ["But does one plastic straw or cup really make a difference? Artist Benjamin Von Wong wants you to know that it does. He builds massive sculptures out of plastic garbage, forcing viewers to re-examine their relationship to single-use plastic products."]
     }
